@@ -1,0 +1,25 @@
+name: Radar GTOCRB
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v4
+      - name: Executar verificação
+        run: python radar.py
+      - name: Registrar resultado do Radar
+        run: |
+          git config user.name 'GTOCRB Radar'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add radar-status.json
+          git diff --cached --quiet || git commit -m 'chore: atualizar status do Radar'
+          git push
