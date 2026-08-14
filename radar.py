@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 import feedparser
 from bs4 import BeautifulSoup
 
-UA = 'GTOCRB-Radar/2.0 (+https://github.com/podacionar-rgb/grupo)'
+UA = 'GTOCRB-Radar/3.0 (+https://github.com/podacionar-rgb/grupo)'
 BASE = os.path.dirname(__file__)
 with open(os.path.join(BASE, 'radar-sources.json'), encoding='utf-8') as f:
     sources = json.load(f)
@@ -35,9 +35,7 @@ def page_meta(url):
     try:
         data, status, final_url = fetch(url, 650_000)
         soup = BeautifulSoup(data, 'html.parser')
-        title = ''
-        if soup.title:
-            title = clean(soup.title.get_text())
+        title = clean(soup.title.get_text()) if soup.title else ''
         for key in [('property','og:title'), ('name','twitter:title')]:
             tag = soup.find('meta', attrs={key[0]: key[1]})
             if tag and tag.get('content'):
@@ -63,13 +61,11 @@ def discover_feed(url):
                 return absolute(href, final_url)
     except Exception:
         pass
-    candidates = ['rss', 'rss.xml', 'feed', 'feed/', 'feeds/posts/default?alt=rss']
-    for suffix in candidates:
+    for suffix in ['rss', 'rss.xml', 'feed', 'feed/', 'feeds/posts/default?alt=rss']:
         candidate = url.rstrip('/') + '/' + suffix
         try:
             data, _, _ = fetch(candidate, 350_000)
-            parsed = feedparser.parse(data)
-            if parsed.entries:
+            if feedparser.parse(data).entries:
                 return candidate
         except Exception:
             continue
@@ -81,8 +77,9 @@ def entry_image(entry, article_url):
             if media.get('url'):
                 return absolute(media['url'], article_url)
     for enc in entry.get('enclosures', []) or []:
-        if enc.get('href') and (enc.get('type','').startswith('image') or re.search(r'\.(jpg|jpeg|png|webp)(\?|$)', enc.get('href',''), re.I)):
-            return absolute(enc['href'], article_url)
+        href = enc.get('href','')
+        if href and (enc.get('type','').startswith('image') or re.search(r'\.(jpg|jpeg|png|webp)(\?|$)', href, re.I)):
+            return absolute(href, article_url)
     _, image, _ = page_meta(article_url)
     return image
 
@@ -91,21 +88,23 @@ def parse_source(src):
     items = []
     if feed_url:
         try:
-            data, _, _ = fetch(feed_url, 800_000)
+            data, _, _ = fetch(feed_url, 1_200_000)
             feed = feedparser.parse(data)
-            for entry in feed.entries[:8]:
+            for entry in feed.entries[:20]:
                 link = entry.get('link','').strip()
                 title = clean(entry.get('title',''))
                 if not link or not title:
                     continue
-                image = entry_image(entry, link)
-                published = entry.get('published') or entry.get('updated') or ''
-                items.append({'source':src['name'],'type':src['type'],'title':title,'url':link,'image':image,'published':published})
+                items.append({
+                    'source': src['name'], 'type': src['type'], 'title': title,
+                    'url': link, 'image': entry_image(entry, link),
+                    'published': entry.get('published') or entry.get('updated') or ''
+                })
         except Exception:
             pass
     if not items:
         try:
-            data, _, final_url = fetch(src['url'], 900_000)
+            data, _, final_url = fetch(src['url'], 1_200_000)
             soup = BeautifulSoup(data, 'html.parser')
             seen = set()
             for a in soup.find_all('a', href=True):
@@ -120,7 +119,7 @@ def parse_source(src):
                 seen.add(href)
                 title, image, _ = page_meta(href)
                 items.append({'source':src['name'],'type':src['type'],'title':title or text,'url':href,'image':image,'published':''})
-                if len(items) >= 5:
+                if len(items) >= 12:
                     break
         except Exception:
             pass
@@ -141,19 +140,27 @@ for src in sources:
         item['error'] = type(e).__name__
     new['sources'].append(item)
 
-# Remove duplicates and keep the newest/most useful 36 entries.
 seen = set(); unique = []
 for item in all_news:
     key = item['url'].split('#')[0].rstrip('/')
-    if key in seen: continue
+    if key in seen:
+        continue
     seen.add(key)
     unique.append(item)
-unique = unique[:36]
+# Keep a large rolling pool: 120 items instead of the previous 36.
+unique = unique[:120]
 with open(os.path.join(BASE, 'news.json'), 'w', encoding='utf-8') as f:
     json.dump({'updated_at':now,'items':unique}, f, ensure_ascii=False, indent=2)
 
 new['sources_by_name'] = {x['name']: x for x in new['sources']}
-new['summary'] = {'total':len(sources),'ok':sum(x['status']=='ok' for x in new['sources']),'errors':sum(x['status']=='erro' for x in new['sources']),'changed':sum(x['changed'] for x in new['sources']),'news_found':len(unique),'automatic_publication':False}
+new['summary'] = {
+    'total':len(sources),
+    'ok':sum(x['status']=='ok' for x in new['sources']),
+    'errors':sum(x['status']=='erro' for x in new['sources']),
+    'changed':sum(x['changed'] for x in new['sources']),
+    'news_found':len(unique),
+    'automatic_publication':False
+}
 with open(state_path, 'w', encoding='utf-8') as f:
     json.dump(new, f, ensure_ascii=False, indent=2)
 print(json.dumps(new['summary'], ensure_ascii=False))
