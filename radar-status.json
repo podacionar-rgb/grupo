@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-11T18:42:03.089351+00:00",
+  "updated_at": "2026-09-11T18:53:00.141770+00:00",
   "sources": [
     {
       "name": "OpenAI",
       "type": "primary",
       "url": "https://openai.com/news/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -16,7 +16,7 @@
       "name": "Google",
       "type": "primary",
       "url": "https://blog.google/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -26,37 +26,37 @@
       "name": "Microsoft",
       "type": "primary",
       "url": "https://www.microsoft.com/pt-br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "20b1d63f85dcd3288ce2b5698198bd47cd6ff9c66e1fe9f0a3e5dbd30f4408d4"
+      "content_hash": "d7b3f930d90000d871a40230e86ef554bbf9001ccdd29561d538b76828bff519"
     },
     {
       "name": "Apple",
       "type": "primary",
       "url": "https://www.apple.com/br/newsroom/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "a54f0d4569ba950c3ccd395492069ce495c1951fe2f1a20bddf079bcbc3394db"
+      "content_hash": "bfac14af7a4bf7e260d1c72dbd04811424a565a2c7d43932f578b3d5e16b922d"
     },
     {
       "name": "Meta",
       "type": "primary",
       "url": "https://about.fb.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "4e11d5a68ca123d33ec73f8a1fa6033394fdb0c2094bed63ffec2cd96b223923"
+      "content_hash": "51abda26820042f7bdf1b39bf10b24d365d128e91036955876dd8c5e565ccf7e"
     },
     {
       "name": "Anthropic",
       "type": "primary",
       "url": "https://www.anthropic.com/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -66,7 +66,7 @@
       "name": "NVIDIA",
       "type": "primary",
       "url": "https://nvidianews.nvidia.com/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -76,7 +76,7 @@
       "name": "Samsung",
       "type": "primary",
       "url": "https://news.samsung.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -87,27 +87,28 @@
       "name": "Xiaomi",
       "type": "primary",
       "url": "https://www.mi.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "56a452a5c7928e9a5f7f6447d3f1f38bb78b22e2b7c058fc9a39d1c25125baa5"
+      "content_hash": "1fcbd53143ce1c81584771f6aee370c1388977cf1d4e8658a2853fb094fbad73"
     },
     {
       "name": "Anatel",
       "type": "primary",
       "url": "https://apps.anatel.gov.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
-      "status": "ok",
-      "changed": true,
-      "http_status": 200,
-      "content_hash": "f2ce1136019b537a76c987db4f0c7d7d4951222703e5e1ade9fca8ca190fc577"
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
+      "status": "erro",
+      "changed": false,
+      "http_status": null,
+      "content_hash": null,
+      "error": "HTTPError"
     },
     {
       "name": "TSMC",
       "type": "primary",
       "url": "https://www.tsmc.com/english/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -118,17 +119,17 @@
       "name": "Qualcomm",
       "type": "primary",
       "url": "https://www.qualcomm.com/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "013b36d862d54c5d683286450126a1435f0568906b01c17ddb0e9b21e00749a7"
+      "content_hash": "9dd5df0992b89b783d145cb74e47ad2e06a79506128569ad4b4fbbd6561bbca0"
     },
     {
       "name": "CISA Brasil",
       "type": "primary",
       "url": "https://site.cisa.org.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -139,51 +140,51 @@
       "name": "Canaltech",
       "type": "comparison",
       "url": "https://canaltech.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "5c74998fff2a715d7e946e53ed717be72e6033286578723c80c801133ae03bd3"
+      "content_hash": "0b428f8569dd6595c61b2f68e8435f10922f2feb2574b8fdb5d4c6aa3771574b"
     },
     {
       "name": "TecMundo",
       "type": "comparison",
       "url": "https://www.tecmundo.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "bfb9ebf05170f295e7702a92e9576d61a9355b4c5f87530d0f67a98f2b06643e"
+      "content_hash": "e6033a061a2e298dec2f11fc8408fc9781031c8b7b2801643d64596eb8af9f6a"
     },
     {
       "name": "Olhar Digital",
       "type": "comparison",
       "url": "https://olhardigital.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "059b165af35b7603c49fc5bcd2486cf0de896baa53ef45059dfd5b5c537292b8"
+      "content_hash": "a30c95d2631688890074ac7f40f4c81a0d86375b3d6a036e37f9339de73e0350"
     },
     {
       "name": "TudoCelular",
       "type": "comparison",
       "url": "https://www.tudocelular.com/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "0a6522baf62ecd43bcd71489d11276f7b38fcfa2691d4db69f83e961a6801531"
+      "content_hash": "4f170641fb24f538c33420e371afe039b1f7601c5816735adb1c2d496ce59680"
     },
     {
       "name": "Tecnoblog",
       "type": "comparison",
       "url": "https://tecnoblog.net/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "2b5b1fafed8b90b67c9f4a0436a8403f5b9ffbc3900c7e27805459299669f0f6"
+      "content_hash": "c4d0e2cfa49560cb6cdbf281fa9cfef6c71d96921564b0ad6b771a564a085c24"
     }
   ],
   "sources_by_name": {
@@ -191,7 +192,7 @@
       "name": "OpenAI",
       "type": "primary",
       "url": "https://openai.com/news/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -202,7 +203,7 @@
       "name": "Google",
       "type": "primary",
       "url": "https://blog.google/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -212,37 +213,37 @@
       "name": "Microsoft",
       "type": "primary",
       "url": "https://www.microsoft.com/pt-br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "20b1d63f85dcd3288ce2b5698198bd47cd6ff9c66e1fe9f0a3e5dbd30f4408d4"
+      "content_hash": "d7b3f930d90000d871a40230e86ef554bbf9001ccdd29561d538b76828bff519"
     },
     "Apple": {
       "name": "Apple",
       "type": "primary",
       "url": "https://www.apple.com/br/newsroom/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "a54f0d4569ba950c3ccd395492069ce495c1951fe2f1a20bddf079bcbc3394db"
+      "content_hash": "bfac14af7a4bf7e260d1c72dbd04811424a565a2c7d43932f578b3d5e16b922d"
     },
     "Meta": {
       "name": "Meta",
       "type": "primary",
       "url": "https://about.fb.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "4e11d5a68ca123d33ec73f8a1fa6033394fdb0c2094bed63ffec2cd96b223923"
+      "content_hash": "51abda26820042f7bdf1b39bf10b24d365d128e91036955876dd8c5e565ccf7e"
     },
     "Anthropic": {
       "name": "Anthropic",
       "type": "primary",
       "url": "https://www.anthropic.com/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -252,7 +253,7 @@
       "name": "NVIDIA",
       "type": "primary",
       "url": "https://nvidianews.nvidia.com/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": false,
       "http_status": 200,
@@ -262,7 +263,7 @@
       "name": "Samsung",
       "type": "primary",
       "url": "https://news.samsung.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -273,27 +274,28 @@
       "name": "Xiaomi",
       "type": "primary",
       "url": "https://www.mi.com/br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "56a452a5c7928e9a5f7f6447d3f1f38bb78b22e2b7c058fc9a39d1c25125baa5"
+      "content_hash": "1fcbd53143ce1c81584771f6aee370c1388977cf1d4e8658a2853fb094fbad73"
     },
     "Anatel": {
       "name": "Anatel",
       "type": "primary",
       "url": "https://apps.anatel.gov.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
-      "status": "ok",
-      "changed": true,
-      "http_status": 200,
-      "content_hash": "f2ce1136019b537a76c987db4f0c7d7d4951222703e5e1ade9fca8ca190fc577"
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
+      "status": "erro",
+      "changed": false,
+      "http_status": null,
+      "content_hash": null,
+      "error": "HTTPError"
     },
     "TSMC": {
       "name": "TSMC",
       "type": "primary",
       "url": "https://www.tsmc.com/english/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -304,17 +306,17 @@
       "name": "Qualcomm",
       "type": "primary",
       "url": "https://www.qualcomm.com/news",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "013b36d862d54c5d683286450126a1435f0568906b01c17ddb0e9b21e00749a7"
+      "content_hash": "9dd5df0992b89b783d145cb74e47ad2e06a79506128569ad4b4fbbd6561bbca0"
     },
     "CISA Brasil": {
       "name": "CISA Brasil",
       "type": "primary",
       "url": "https://site.cisa.org.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "erro",
       "changed": false,
       "http_status": null,
@@ -325,58 +327,58 @@
       "name": "Canaltech",
       "type": "comparison",
       "url": "https://canaltech.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "5c74998fff2a715d7e946e53ed717be72e6033286578723c80c801133ae03bd3"
+      "content_hash": "0b428f8569dd6595c61b2f68e8435f10922f2feb2574b8fdb5d4c6aa3771574b"
     },
     "TecMundo": {
       "name": "TecMundo",
       "type": "comparison",
       "url": "https://www.tecmundo.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "bfb9ebf05170f295e7702a92e9576d61a9355b4c5f87530d0f67a98f2b06643e"
+      "content_hash": "e6033a061a2e298dec2f11fc8408fc9781031c8b7b2801643d64596eb8af9f6a"
     },
     "Olhar Digital": {
       "name": "Olhar Digital",
       "type": "comparison",
       "url": "https://olhardigital.com.br/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "059b165af35b7603c49fc5bcd2486cf0de896baa53ef45059dfd5b5c537292b8"
+      "content_hash": "a30c95d2631688890074ac7f40f4c81a0d86375b3d6a036e37f9339de73e0350"
     },
     "TudoCelular": {
       "name": "TudoCelular",
       "type": "comparison",
       "url": "https://www.tudocelular.com/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "0a6522baf62ecd43bcd71489d11276f7b38fcfa2691d4db69f83e961a6801531"
+      "content_hash": "4f170641fb24f538c33420e371afe039b1f7601c5816735adb1c2d496ce59680"
     },
     "Tecnoblog": {
       "name": "Tecnoblog",
       "type": "comparison",
       "url": "https://tecnoblog.net/",
-      "checked_at": "2026-09-11T18:42:03.089351+00:00",
+      "checked_at": "2026-09-11T18:53:00.141770+00:00",
       "status": "ok",
       "changed": true,
       "http_status": 200,
-      "content_hash": "2b5b1fafed8b90b67c9f4a0436a8403f5b9ffbc3900c7e27805459299669f0f6"
+      "content_hash": "c4d0e2cfa49560cb6cdbf281fa9cfef6c71d96921564b0ad6b771a564a085c24"
     }
   },
   "summary": {
     "total": 18,
-    "ok": 14,
-    "errors": 4,
-    "changed": 11,
+    "ok": 13,
+    "errors": 5,
+    "changed": 10,
     "news_found": 120,
     "automatic_publication": false
   }
